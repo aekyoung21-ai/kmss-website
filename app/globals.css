@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* KMSS Brand Colors */
+  --color-kmss-berry: #8B2252;
+  --color-kmss-berry-mid: #C9799B;
+  --color-kmss-berry-light: #F8F0F4;
+  --color-kmss-navy: #1C1A4A;
+  --color-kmss-blue: #8AAAD8;
+  --color-kmss-mauve: #AA7898;
+
+  /* Typography */
+  --font-sans: var(--font-noto-sans);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
