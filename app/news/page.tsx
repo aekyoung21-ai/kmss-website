@@ -49,7 +49,7 @@ const newsItems: NewsItem[] = [
     date: "2026.02.09",
     title: "2026년 2월 정규특강 AI 패키지 1강 — AI를 활용한 효율적인 연구법",
     tag: "특강",
-    speaker: "@phd.shin",
+    speaker: "신박사님 (@phd.shin)",
     datetime: "2026년 2월 9일(월) 저녁 9시 KST · ZOOM 온라인",
     fee: "10,000원 (2강 통합)",
     detail: "연구 주제 선정부터 논문 작성까지, AI를 활용해 연구를 더욱 효율적으로 하는 방법을 공유합니다.",
