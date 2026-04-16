@@ -12,7 +12,7 @@ const executives = [
   { role: "감사", name: "진선미", nickname: "가인맘", org: "Indiana University Bloomington (고등교육전공)", position: "박사수료" },
   { role: "서기", name: "박주영", nickname: "제이씬", org: "이화여자대학교 임상바이오헬스대학원 (임상영양학전공)", position: "석사과정" },
   { role: "서기", name: "송수연", nickname: "리즈", org: "경기 신천고등학교 (역사교육전공)", position: "박사수료" },
-  { role: "이사", name: "김소이", nickname: "세츄츄", org: "충남대학교 미래인재성장연구소", position: "박사수료" },
+  { role: "이사", name: "김소이", nickname: "세츄츄", org: "충남대학교 (직업교육전공)", position: "박사수료" },
   { role: "이사", name: "김예슬", nickname: "푸리맘", org: "서울과학기술대학교 (안전공학과)", position: "석사과정" },
   { role: "이사", name: "김혜린", nickname: "해달맘", org: "서울특별시청 (고려대학교 보건대학원)", position: "석사졸업" },
   { role: "이사", name: "신혜성", nickname: "세요맘", org: "청운대학교 (교육공학전공)", position: "교수" },
