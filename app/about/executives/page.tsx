@@ -18,10 +18,10 @@ const executives = [
   { role: "이사", name: "신혜성", nickname: "세요맘", org: "청운대학교 (교육공학전공)", position: "교수" },
   { role: "이사", name: "이승주", nickname: "노니", org: "서울대학교 (보건정책관리학)", position: "박사수료" },
   { role: "이사", name: "이정은", nickname: "온맘", org: "이화여자대학교 (평생교육전공)", position: "박사과정" },
-  { role: "이사", name: "이한슬기", nickname: "키키", org: "서울대학교 (간호대학)", position: "박사수료" },
+  { role: "이사", name: "이한슬기", nickname: "키키", org: "서울대학교 간호대학 (간호학 전공)", position: "박사수료" },
   { role: "이사", name: "임나래", nickname: "모리", org: "큐레이터 (미학, 예술학)", position: "석사졸업" },
   { role: "이사", name: "임재은", nickname: "라비에", org: "세종여자고등학교 체육교사 (체육교육)", position: "박사수료" },
-  { role: "이사", name: "정지은", nickname: "소라블리", org: "강남대학교 (교육학과)", position: "박사졸업" },
+  { role: "이사", name: "정지은", nickname: "소라블리", org: "강남대학교 교육학과 (심리학 박사)", position: "강사" },
 ];
 
 const roleBadgeColor: Record<string, string> = {
