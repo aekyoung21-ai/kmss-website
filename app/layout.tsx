@@ -11,13 +11,28 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "한국엄마학자협회 | KMSS",
+  metadataBase: new URL("https://www.koreanmotherscholar.org"),
+  title: {
+    default: "한국엄마학자협회 | KMSS",
+    template: "%s | KMSS",
+  },
   description:
     "연대의 힘으로 서로를 지지하며, 학문과 육아를 아우르는 지속가능한 여정. Korean MotherScholar Society.",
   openGraph: {
     title: "한국엄마학자협회 | KMSS",
-    description: "Korean MotherScholar Society",
-    siteName: "KMSS",
+    description: "연대의 힘으로 서로를 지지하며, 학문과 육아를 아우르는 지속가능한 여정. Korean MotherScholar Society.",
+    siteName: "한국엄마학자협회 KMSS",
+    url: "https://www.koreanmotherscholar.org",
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "한국엄마학자협회 | KMSS",
+    description: "연대의 힘으로 서로를 지지하며, 학문과 육아를 아우르는 지속가능한 여정.",
+  },
+  alternates: {
+    canonical: "https://www.koreanmotherscholar.org",
   },
 };
 

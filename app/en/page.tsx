@@ -3,14 +3,23 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About | Korean MotherScholar Society (KMSS)",
+  title: { absolute: "About | Korean MotherScholar Society (KMSS)" },
   description:
     "KMSS is a solidarity space for Korean academic mothers — sharing experiences, supporting each other, and sustaining scholarship alongside family life.",
+  openGraph: {
+    title: "About | Korean MotherScholar Society (KMSS)",
+    description: "KMSS is a solidarity space for Korean academic mothers — sharing experiences, supporting each other, and sustaining scholarship alongside family life.",
+    url: "https://www.koreanmotherscholar.org/en",
+    locale: "en_US",
+  },
+  alternates: {
+    canonical: "https://www.koreanmotherscholar.org/en",
+  },
 };
 
 const executivesEn = [
   { role: "President", name: "Aekyoung Sun", org: "Korea University (Educational Administration & Higher Education)", position: "Research Professor" },
-  { role: "Vice President", name: "Ownkyeong Lee", org: "Ludwig-Maximilians-Universität (Psychology)", position: "PhD Candidate" },
+  { role: "Vice President", name: "Ownkyeong Lee", org: "Ludwig-Maximilians-Universität (Psychology)", position: "PhD Student" },
   { role: "Auditor", name: "Rey Jeong", org: "California State University, Sacramento (Studio Art)", position: "Assistant Professor" },
   { role: "Auditor", name: "Sunmi Jin", org: "Indiana University Bloomington (Higher Education)", position: "PhD ABD" },
 ];
@@ -56,12 +65,12 @@ export default function EnPage() {
 
       {/* About */}
       <section className="max-w-5xl mx-auto px-6 py-14">
-        <h2 className="text-2xl font-bold text-kmss-berry mb-2">Why "MotherScholar"?</h2>
+        <h2 className="text-2xl font-bold text-kmss-berry mb-2">Why &ldquo;MotherScholar&rdquo;?</h2>
         <div className="w-12 h-1 bg-kmss-berry rounded mb-8" />
         <div className="max-w-3xl space-y-5 text-gray-700 leading-relaxed">
           <p>
             In Korean society, the responsibility of caregiving remains disproportionately
-            concentrated on "mothers." For women pursuing academic careers, "becoming a mother"
+            concentrated on &ldquo;mothers.&rdquo; For women pursuing academic careers, &ldquo;becoming a mother&rdquo;
             brings multifaceted challenges —{" "}
             <strong className="text-kmss-navy">
               constraints on research time, the distribution of energy, and constant tension
@@ -76,7 +85,7 @@ export default function EnPage() {
             passions with family life.
           </p>
           <p>
-            Under the name "MotherScholar," we transform personal experiences into collective
+            Under the name &ldquo;MotherScholar,&rdquo; we transform personal experiences into collective
             wisdom and explore{" "}
             <strong className="text-kmss-navy">
               new possibilities of connection rather than isolation.

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AboutSubNav from "../SubNav";
 
 export const metadata: Metadata = {
-  title: "운영규정 | 한국엄마학자협회 KMSS",
+  title: "운영규정",
 };
 
 type Paragraph = {

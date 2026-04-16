@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "참여하기 | 한국엄마학자협회 KMSS",
+  title: "참여하기",
 };
 
 export default function JoinPage() {

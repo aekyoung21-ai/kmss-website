@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AboutSubNav from "../SubNav";
 
 export const metadata: Metadata = {
-  title: "임원진 | 한국엄마학자협회 KMSS",
+  title: "임원진",
 };
 
 const executives = [

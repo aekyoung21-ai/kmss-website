@@ -103,9 +103,9 @@ export default function HomePage() {
             </p>
             <h2 className="text-3xl font-bold text-kmss-navy mb-5">우리의 이야기</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-7 max-w-lg">
-              한국 사회에서 돌봄의 책임은 여전히 '엄마'에게 불균형적으로 집중되어 있습니다.
-              학문을 추구하는 여성들에게 '엄마됨'은 연구 시간의 제약, 에너지 분배,
-              학계와 사회의 기대 사이의 갈등 등 다양한 차원의 도전으로 이어집니다.
+              한국엄마학자협회(KMSS)는 학문과 육아를 병행하는 여성들이 서로의 경험을 나누고
+              지지하기 위해 만들어진 연대의 공간입니다. &lsquo;학자이자 엄마&rsquo;라는 정체성이 마주하는
+              도전을 고립이 아닌 연결로 함께 헤쳐나가는 것을 목적으로 합니다.
             </p>
             <Link
               href="/about"
