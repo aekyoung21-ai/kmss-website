@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const executivesEn = [
-  { role: "President", name: "Aekyoung Sun", org: "Korea University, Engineering Education Innovation Center", position: "Research Professor" },
-  { role: "Vice President", name: "Ownkyeong Lee", org: "Ludwig-Maximilians-Universität, Psychology", position: "PhD Candidate" },
+  { role: "President", name: "Aekyoung Sun", org: "Korea University (Educational Administration & Higher Education)", position: "Research Professor" },
+  { role: "Vice President", name: "Ownkyeong Lee", org: "Ludwig-Maximilians-Universität (Psychology)", position: "PhD Candidate" },
   { role: "Auditor", name: "Rey Jeong", org: "California State University, Sacramento (Studio Art)", position: "Assistant Professor" },
   { role: "Auditor", name: "Sunmi Jin", org: "Indiana University Bloomington (Higher Education)", position: "PhD ABD" },
 ];
