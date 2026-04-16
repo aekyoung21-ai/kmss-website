@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.koreanmotherscholar.org",
   },
+  verification: {
+    google: "1IrEbaPikg-8Ef2n2F9v05JQ24hurq6uEAdH1maHWs4",
+  },
 };
 
 export default function RootLayout({
