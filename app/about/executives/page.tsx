@@ -3,6 +3,14 @@ import AboutSubNav from "../SubNav";
 
 export const metadata: Metadata = {
   title: "임원진",
+  openGraph: {
+    title: "임원진 | KMSS",
+    description: "한국엄마학자협회 임원진 소개",
+    url: "https://www.koreanmotherscholar.org/about/executives",
+  },
+  alternates: {
+    canonical: "https://www.koreanmotherscholar.org/about/executives",
+  },
 };
 
 const executives = [

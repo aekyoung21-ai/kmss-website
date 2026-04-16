@@ -3,6 +3,11 @@ import AboutSubNav from "./SubNav";
 
 export const metadata: Metadata = {
   title: "설립취지",
+  openGraph: {
+    title: "설립취지 | KMSS",
+    description: "왜 '엄마학자'이어야 하는가? 한국엄마학자협회 설립 취지와 임원진을 소개합니다.",
+    url: "https://www.koreanmotherscholar.org/about",
+  },
   alternates: {
     canonical: "https://www.koreanmotherscholar.org/about",
   },

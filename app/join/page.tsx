@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "참여하기",
+  openGraph: {
+    title: "참여하기 | KMSS",
+    description: "엄마이자 학자라면 누구나 함께할 수 있습니다. 한국엄마학자협회 참여 방법 안내.",
+    url: "https://www.koreanmotherscholar.org/join",
+  },
+  alternates: {
+    canonical: "https://www.koreanmotherscholar.org/join",
+  },
 };
 
 export default function JoinPage() {

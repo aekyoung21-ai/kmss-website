@@ -3,6 +3,14 @@ import AboutSubNav from "../SubNav";
 
 export const metadata: Metadata = {
   title: "정관",
+  openGraph: {
+    title: "정관 | KMSS",
+    description: "한국엄마학자협회 정관",
+    url: "https://www.koreanmotherscholar.org/about/charter",
+  },
+  alternates: {
+    canonical: "https://www.koreanmotherscholar.org/about/charter",
+  },
 };
 
 const chapters = [

@@ -3,6 +3,14 @@ import AboutSubNav from "../SubNav";
 
 export const metadata: Metadata = {
   title: "운영규정",
+  openGraph: {
+    title: "운영규정 | KMSS",
+    description: "한국엄마학자협회 운영규정",
+    url: "https://www.koreanmotherscholar.org/about/rules",
+  },
+  alternates: {
+    canonical: "https://www.koreanmotherscholar.org/about/rules",
+  },
 };
 
 type Paragraph = {
