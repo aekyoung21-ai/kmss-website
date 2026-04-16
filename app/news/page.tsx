@@ -12,6 +12,7 @@ type NewsItem = {
   tag: "공지" | "특강" | "보도";
   speaker?: string;
   datetime?: string;
+  location?: string;
   fee?: string;
   detail: string;
 };
@@ -22,7 +23,9 @@ const newsItems: NewsItem[] = [
     date: "2025.06",
     title: "한국엄마학자협회(KMSS) 창립총회 개최",
     tag: "공지",
-    detail: "일시: 2025년 6월 23일(월) 오후 10시 30분 · Zoom 온라인\n참석: 발기인 28명\n\n결정 사항\n- 정관 및 운영규정 의결 (시행일 2025. 6. 23.)\n- 초대 임원진 선출 (회장·부회장·감사·서기·이사, 총 16인)\n- 2025/26 사업계획안 승인",
+    datetime: "2025년 6월 23일(월) 오후 10시 30분",
+    location: "Zoom 온라인",
+    detail: "참석: 발기인 28명\n\n결정 사항\n- 정관 및 운영규정 의결 (시행일 2025. 6. 23.)\n- 초대 임원진 선출 (회장·부회장·감사·서기·이사, 총 16인)\n- 2025/26 사업계획안 승인",
   },
   {
     category: "특강 및 행사",
@@ -181,9 +184,10 @@ export default function NewsPage() {
                       <span className="text-xs text-gray-400">{item.date}</span>
                     </div>
                     <p className="font-semibold text-kmss-navy leading-snug">{item.title}</p>
-                    {isLecture && (
-                      <p className="text-sm text-gray-500">{item.speaker}</p>
-                    )}
+                    {isLecture
+                      ? <p className="text-sm text-gray-500">{item.speaker}</p>
+                      : item.datetime && <p className="text-sm text-gray-500">일시 {item.datetime}</p>
+                    }
                   </div>
                   {/* 펼치기 아이콘 */}
                   <svg
@@ -201,6 +205,12 @@ export default function NewsPage() {
                       <div className="flex gap-2 text-sm">
                         <span className="text-gray-400 shrink-0">일시</span>
                         <span className="text-gray-700">{item.datetime}</span>
+                      </div>
+                    )}
+                    {item.location && (
+                      <div className="flex gap-2 text-sm">
+                        <span className="text-gray-400 shrink-0">장소</span>
+                        <span className="text-gray-700">{item.location}</span>
                       </div>
                     )}
                     {item.fee && (
