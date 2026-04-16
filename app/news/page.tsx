@@ -41,7 +41,7 @@ const newsItems: NewsItem[] = [
     tag: "특강",
     speaker: "선애경 (두잇맘, 고려대학교 연구교수)",
     datetime: "2026년 2월 11일(수) 저녁 9시 KST · ZOOM 온라인",
-    fee: "10,000원 (2강 통합 — 1강만 수강해도 동일)",
+    fee: "10,000원 (2강 통합)",
     detail: "진정한 학습을 일으키는 AI 활용법, 대학 수업에서의 AI 적용 사례, AI 활용 자기점검표 등을 다룹니다.",
   },
   {
@@ -51,7 +51,7 @@ const newsItems: NewsItem[] = [
     tag: "특강",
     speaker: "@phd.shin",
     datetime: "2026년 2월 9일(월) 저녁 9시 KST · ZOOM 온라인",
-    fee: "10,000원 (2강 통합 — 1강만 수강해도 동일)",
+    fee: "10,000원 (2강 통합)",
     detail: "연구 주제 선정부터 논문 작성까지, AI를 활용해 연구를 더욱 효율적으로 하는 방법을 공유합니다.",
   },
   {
@@ -71,7 +71,7 @@ const newsItems: NewsItem[] = [
     tag: "특강",
     speaker: "윤선희 대표 ((주)드림셀파, 경영학 박사 / 홍익대학교)",
     datetime: "2025년 8월 25일(월) 오전 10시 KST · ZOOM 온라인",
-    fee: "5,000원 (3강 시리즈 통합 — 수강 수 무관)",
+    fee: "5,000원 (3강 시리즈 통합)",
     detail: "양육과 병행하는 전략적 논문 작성법, 논문에 AI를 활용하는 방법, 학술지 투고 전략, 엄마학자로서의 경험을 나눕니다.",
   },
   {
@@ -81,7 +81,7 @@ const newsItems: NewsItem[] = [
     tag: "특강",
     speaker: "이진아 교수 (University of Illinois Urbana-Champaign, 사회학과 조교수)",
     datetime: "2025년 8월 18일(월) 오전 10시 KST · ZOOM 온라인",
-    fee: "5,000원 (3강 시리즈 통합 — 수강 수 무관)",
+    fee: "5,000원 (3강 시리즈 통합)",
     detail: "학계에서 자기홍보(Self-promotion)의 젠더 갭, 이론적 명성에서의 불평등 연구를 발표합니다.",
   },
   {
@@ -91,7 +91,7 @@ const newsItems: NewsItem[] = [
     tag: "특강",
     speaker: "정재숙 박사 (Universität Bayreuth 데이터 큐레이터, 컴퓨터공학 박사 / Utrecht University)",
     datetime: "2025년 8월 11일(월) 저녁 9시 KST · ZOOM 온라인",
-    fee: "5,000원 (3강 시리즈 통합 — 수강 수 무관)",
+    fee: "5,000원 (3강 시리즈 통합)",
     detail: "이공계·학제간 융합 연구 논문 작성 경험, 논문 리뷰어로서의 관점, 조직에서 일하는 엄마학자의 경험을 공유합니다.",
   },
   {
