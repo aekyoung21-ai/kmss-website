@@ -186,7 +186,7 @@ export default function NewsPage() {
                     <p className="font-semibold text-kmss-navy leading-snug">{item.title}</p>
                     {isLecture
                       ? <p className="text-sm text-gray-500">{item.speaker}</p>
-                      : item.datetime && <p className="text-sm text-gray-500">일시 {item.datetime}</p>
+                      : item.datetime && <p className="text-sm text-gray-500">{item.datetime.split("(")[0]}</p>
                     }
                   </div>
                   {/* 펼치기 아이콘 */}
