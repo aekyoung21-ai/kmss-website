@@ -171,7 +171,7 @@ export default function NewsPage() {
                 {/* 항상 보이는 헤더 */}
                 <button
                   onClick={() => setExpandedIndex(isOpen ? null : idx)}
-                  className="w-full text-left px-5 py-4 flex items-start justify-between gap-4 cursor-pointer"
+                  className="w-full text-left px-5 py-4 flex items-start justify-between gap-4 cursor-pointer min-h-[5.5rem]"
                 >
                   <div className="flex flex-col gap-1.5 flex-1 min-w-0">
                     <div className="flex items-center gap-2">
