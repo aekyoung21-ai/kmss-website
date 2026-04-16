@@ -22,7 +22,7 @@ const newsItems: NewsItem[] = [
     date: "2025.06",
     title: "한국엄마학자협회(KMSS) 창립총회 개최",
     tag: "공지",
-    detail: "2025년 6월 창립총회를 온라인으로 개최하였습니다. 초대 임원진 16명과 함께 협회의 새로운 시작을 알렸습니다.",
+    detail: "일시: 2025년 6월 23일(월) 오후 10시 30분 · Zoom 온라인\n참석: 발기인 28명\n\n결정 사항\n- 정관 및 운영규정 의결 (시행일 2025. 6. 23.)\n- 초대 임원진 선출 (회장·부회장·감사·서기·이사, 총 16인)\n- 2025/26 사업계획안 승인",
   },
   {
     category: "특강 및 행사",
@@ -209,7 +209,7 @@ export default function NewsPage() {
                         <span className="text-gray-700">{item.fee}</span>
                       </div>
                     )}
-                    <p className="text-sm text-gray-600 leading-relaxed pt-1">{item.detail}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed pt-1 whitespace-pre-line">{item.detail}</p>
                   </div>
                 )}
               </div>
