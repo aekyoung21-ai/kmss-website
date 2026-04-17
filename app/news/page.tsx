@@ -143,7 +143,7 @@ export default function NewsPage() {
       <section className="bg-white border-b border-gray-100 py-14">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-kmss-berry text-xs font-semibold uppercase tracking-widest mb-2">News & Updates</p>
-          <h1 className="text-3xl font-bold text-kmss-navy">소식</h1>
+          <h1 className="text-3xl font-bold text-kmss-navy">협회소식</h1>
         </div>
       </section>
 
@@ -238,7 +238,7 @@ export default function NewsPage() {
         </div>
 
         <p className="text-center text-gray-400 text-sm mt-12">
-          소식을 업데이트하는 중입니다. 인스타그램{" "}
+          협회소식을 업데이트하는 중입니다. 인스타그램{" "}
           <a
             href="https://instagram.com/k_motherscholar_society"
             target="_blank"
@@ -247,7 +247,7 @@ export default function NewsPage() {
           >
             @k_motherscholar_society
           </a>
-          에서 최신 소식을 먼저 만나보세요.
+          에서 최신 협회소식을 먼저 만나보세요.
         </p>
       </section>
     </>
