@@ -38,6 +38,7 @@ function renderWithHighlights(text: string, highlights?: string[]) {
 }
 
 const newsItems: NewsItem[] = [
+  /* [테스트중 — 배포 보류]
   {
     category: "공지사항",
     date: "2026.04",
@@ -106,6 +107,7 @@ If you are interested in joining, feel free to contact Wony, the vice president 
       "aeioufamily@outlook.de",
     ],
   },
+  */
   {
     category: "특강 및 행사",
     date: "2026.02.23",
