@@ -9,7 +9,7 @@ type NewsItem = {
   category: string;
   date: string;
   title: string;
-  tag: "공지" | "특강" | "보도";
+  tag: "공지" | "특강" | "행사" | "보도";
   speaker?: string;
   datetime?: string;
   location?: string;
@@ -18,15 +18,6 @@ type NewsItem = {
 };
 
 const newsItems: NewsItem[] = [
-  {
-    category: "공지사항",
-    date: "2025.12",
-    title: "한국엄마학자협회(KMSS) 2025 연말모임",
-    tag: "공지",
-    datetime: "2025년 12월 20일(토) 밤 10시 KST",
-    location: "Zoom 비대면 온라인",
-    detail: "올 한 해 각자의 자리에서 치열하게 달려온 회원님들과 따뜻한 격려의 시간을 나누고자 연말 온라인 모임을 준비했습니다.\n\n[준비 및 참고사항]\n- 온라인으로 진행되는 만큼, 각자 마시고 싶은 음료를 편안하게 준비해 주세요.\n- 올해 자신이나 자녀(들)에게 의미 있었던 물건을 하나씩 챙겨와 주세요. 함께 그 의미를 나누어보고자 합니다.",
-  },
   {
     category: "공지사항",
     date: "2025.06",
@@ -65,6 +56,15 @@ const newsItems: NewsItem[] = [
     datetime: "2026년 2월 9일(월) 저녁 9시 KST · ZOOM 온라인",
     fee: "10,000원 (2강 통합)",
     detail: "연구 주제 선정부터 논문 작성까지, AI를 활용해 연구를 더욱 효율적으로 하는 방법을 공유합니다.",
+  },
+  {
+    category: "특강 및 행사",
+    date: "2025.12.20",
+    title: "한국엄마학자협회(KMSS) 2025 연말모임",
+    tag: "행사",
+    datetime: "2025년 12월 20일(토) 밤 10시 KST",
+    location: "Zoom 비대면 온라인",
+    detail: "올 한 해 각자의 자리에서 치열하게 달려온 회원님들과 따뜻한 격려의 시간을 나누고자 연말 온라인 모임을 준비했습니다.\n\n[준비 및 참고사항]\n- 온라인으로 진행되는 만큼, 각자 마시고 싶은 음료를 편안하게 준비해 주세요.\n- 올해 자신이나 자녀(들)에게 의미 있었던 물건을 하나씩 챙겨와 주세요. 함께 그 의미를 나누어보고자 합니다.",
   },
   {
     category: "특강 및 행사",
@@ -118,6 +118,7 @@ const newsItems: NewsItem[] = [
 const tagStyle: Record<string, string> = {
   공지: "bg-kmss-berry/10 text-kmss-berry",
   특강: "bg-kmss-navy/10 text-kmss-navy",
+  행사: "bg-amber-100 text-amber-700",
   보도: "bg-kmss-blue/20 text-kmss-navy",
 };
 
