@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const tabs = ["전체", "공지사항", "특강 및 행사", "보도자료"] as const;
@@ -14,18 +15,96 @@ type NewsItem = {
   datetime?: string;
   location?: string;
   fee?: string;
+  contact?: string;
+  logos?: { src: string; alt: string; scale?: number }[];
   detail: string;
+  detailEn?: string;
+  titleEn?: string;
+  highlights?: string[];
+  highlightsEn?: string[];
 };
+
+function renderWithHighlights(text: string, highlights?: string[]) {
+  if (!highlights || highlights.length === 0) return text;
+  const escaped = highlights.map((h) => h.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const pattern = new RegExp("(" + escaped.join("|") + ")", "g");
+  return text.split(pattern).map((part, i) =>
+    highlights.includes(part) ? (
+      <span key={i} className="font-semibold text-kmss-berry">{part}</span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
 
 const newsItems: NewsItem[] = [
   {
     category: "공지사항",
-    date: "2025.06",
-    title: "한국엄마학자협회(KMSS) 창립총회 개최",
+    date: "2026.04",
+    title: "[강의자 모집] 한국엄마학자협회 × 독일 aeiou family — 해외 한국계 아이들을 위한 5월 온라인 강의",
+    titleEn: "[Call for Lecturers] KMSS × aeiou family — Online Lectures for Children of Korean Heritage this May",
     tag: "공지",
-    datetime: "2025년 6월 23일(월) 오후 10시 30분",
-    location: "Zoom 온라인",
-    detail: "참석: 발기인 28명\n\n결정 사항\n- 정관 및 운영규정 의결 (시행일 2025. 6. 23.)\n- 초대 임원진 선출 (회장·부회장·감사·서기·이사, 총 16인)\n- 2025/26 사업계획안 승인",
+    datetime: "2026년 5월 중 (강의자 일정 및 각 대륙 시차를 고려하여 조율)",
+    location: "ZOOM 온라인",
+    contact: "협회 부회장 Wony 개인톡 또는 aeioufamily@outlook.de",
+    logos: [
+      { src: "/kmss-logo-vertical.png", alt: "한국엄마학자협회 (KMSS)", scale: 1.5 },
+      { src: "/aeiou-family.png", alt: "aeiou family e.V." },
+    ],
+    detail: `"5월 가정의 달, 한국엄마학자협회 엄마학자들이 전 세계 한국계 아이들과 온라인에서 만납니다."
+
+해외에서 자라는 아이들에게 한국어로 다양한 주제의 강의를 선물해주실 엄마학자를 모집합니다!
+
+어린이·청소년을 대상으로 온라인 강의를 진행해주실 분들의 많은 관심 부탁드립니다.
+
+• 주제: 엄마학자 본인의 전공 분야 내에서 자유롭게 선정해주세요. (어린이·청소년 눈높이에 맞춰주시면 더욱 좋습니다)
+• 강의 시간: 강의 30분 + 질의응답 10분
+• 일정: 강의자 일정과 각 대륙의 시차를 고려하여 조율
+
+이 프로그램은 한국엄마학자협회와 독일 비영리 단체 aeiou family가 함께 준비하는 프로젝트입니다. 강의에 참여해주시는 엄마학자께는 한국엄마학자협회에서 기프티콘을, aeiou family에서 작은 선물을 준비해 드릴 예정입니다.
+
+aeiou family e.V.는 독일에 공식 등록된 비영리 단체로, 다중언어·다문화 환경의 가정과 유산 언어(Heritage Language) 전수 기관을 위한 프로그램과 자료를 제공합니다. 전 세계에서 한국어와 한국 문화를 배경으로 자라는 가정을 위해 다중언어 발달 및 교육 관련 부모·양육자 세미나, 아이들을 위한 한국어 스토리타임 등을 운영하고 있습니다. https://aeioufamily.org
+
+프로그램 참여에 관심 있으신 분은 협회 부회장 @Wony/심리학/박사과정/17,23에게 개인톡을 보내주시거나 aeioufamily@outlook.de 로 연락 부탁드립니다.
+
+"한국엄마학자협회는 엄마학자를 비롯해 학문의 길을 걷는 모든 분들과 함께합니다."`,
+    detailEn: `Be part of our journey to support children of Korean heritage around the world!
+
+We are looking for dedicated, volunteer Korean mother scholars to give online lectures to children and teenagers.
+
+This is a new project in which, during the month of May, academics from the Korean MotherScholar Society (KMSS) will deliver lectures to children of Korean heritage worldwide, co-hosted by the KMSS and a non-profit organization, aeiou family.
+
+aeiou family e.V. is an officially registered in Germany that offers programs and resources for families in multilingual and multicultural environments, as well as for institutions specializing in teaching heritage languages. Specifically, for families growing up with the Korean language and culture, seminars on multilingual development and education for parents/caregivers, along with Korean storytime sessions for children, are offered. More information can be found at aeioufamily.org.
+
+For Interested:
+
+• Topics: Open to any subject related to your field of study
+• Lecture Duration: 30 minutes, followed by a 10-minute Q&A session
+• Schedule: To be determined based on the lecturers' available schedule and time differences
+
+Please support children growing up outside Korea by offering them the opportunity to attend lectures on various topics in Korean!
+
+Participating volunteer mother scholars will receive Kakaotalk gifticons from the KMSS, and the aeiou family will also prepare small gifts.
+
+If you are interested in joining, feel free to contact Wony, the vice president of the KMSS, in the KakaoTalk group chat or via email at aeioufamily@outlook.de.
+
+"KMSS stands with mother scholars and all who walk the path of scholarship."`,
+    highlights: [
+      "해외에서 자라는 아이들에게 한국어로 다양한 주제의 강의를 선물해주실 엄마학자를 모집합니다!",
+      "강의 30분 + 질의응답 10분",
+      "기프티콘",
+      "작은 선물",
+      "@Wony/심리학/박사과정/17,23",
+      "aeioufamily@outlook.de",
+    ],
+    highlightsEn: [
+      "Be part of our journey to support children of Korean heritage around the world!",
+      "30 minutes, followed by a 10-minute Q&A session",
+      "Kakaotalk gifticons",
+      "small gifts",
+      "Wony, the vice president of the KMSS",
+      "aeioufamily@outlook.de",
+    ],
   },
   {
     category: "특강 및 행사",
@@ -105,6 +184,15 @@ const newsItems: NewsItem[] = [
     datetime: "2025년 8월 11일(월) 저녁 9시 KST · ZOOM 온라인",
     fee: "5,000원 (3강 시리즈 통합)",
     detail: "이공계·학제간 융합 연구 논문 작성 경험, 논문 리뷰어로서의 관점, 조직에서 일하는 엄마학자의 경험을 공유합니다.",
+  },
+  {
+    category: "공지사항",
+    date: "2025.06",
+    title: "한국엄마학자협회(KMSS) 창립총회 개최",
+    tag: "공지",
+    datetime: "2025년 6월 23일(월) 오후 10시 30분",
+    location: "Zoom 온라인",
+    detail: "참석: 발기인 28명\n\n결정 사항\n- 정관 및 운영규정 의결 (시행일 2025. 6. 23.)\n- 초대 임원진 선출 (회장·부회장·감사·서기·이사, 총 16인)\n- 2025/26 사업계획안 승인",
   },
   {
     category: "보도자료",
@@ -211,6 +299,23 @@ export default function NewsPage() {
                 {/* 펼쳐지는 상세 */}
                 {isOpen && (
                   <div className="px-5 pb-5 flex flex-col gap-3 border-t border-gray-100 pt-4">
+                    {item.logos && item.logos.length > 0 && (
+                      <div className="flex items-center justify-center gap-6 sm:gap-10 py-4 mb-2">
+                        {item.logos.map((logo, i) => (
+                          <div key={logo.src} className="flex items-center gap-6 sm:gap-10">
+                            {i > 0 && <span className="text-gray-300 text-xl font-light">×</span>}
+                            <Image
+                              src={logo.src}
+                              alt={logo.alt}
+                              width={200}
+                              height={200}
+                              className="h-20 sm:h-24 w-auto object-contain"
+                              style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                     {item.datetime && (
                       <div className="flex gap-2 text-sm">
                         <span className="text-gray-400 shrink-0">일시</span>
@@ -229,7 +334,30 @@ export default function NewsPage() {
                         <span className="text-gray-700">{item.fee}</span>
                       </div>
                     )}
-                    <p className="text-sm text-gray-600 leading-relaxed pt-1 whitespace-pre-line">{item.detail}</p>
+                    {item.contact && (
+                      <div className="flex gap-2 text-sm">
+                        <span className="text-gray-400 shrink-0">문의</span>
+                        <span className="text-gray-700">{item.contact}</span>
+                      </div>
+                    )}
+                    <p className="text-sm text-gray-600 leading-relaxed pt-1 whitespace-pre-line">
+                      {renderWithHighlights(item.detail, item.highlights)}
+                    </p>
+                    {item.detailEn && (
+                      <>
+                        <div className="flex items-center gap-3 pt-4 mt-2">
+                          <div className="h-px flex-1 bg-gray-200" />
+                          <span className="text-xs font-semibold uppercase tracking-widest text-kmss-berry">English</span>
+                          <div className="h-px flex-1 bg-gray-200" />
+                        </div>
+                        {item.titleEn && (
+                          <p className="font-semibold text-kmss-navy leading-snug pt-1">{item.titleEn}</p>
+                        )}
+                        <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">
+                          {renderWithHighlights(item.detailEn, item.highlightsEn)}
+                        </p>
+                      </>
+                    )}
                   </div>
                 )}
               </div>
