@@ -22,23 +22,39 @@ type NewsItem = {
   titleEn?: string;
   highlights?: string[];
   highlightsEn?: string[];
+  draft?: boolean;
 };
 
 function renderWithHighlights(text: string, highlights?: string[]) {
-  if (!highlights || highlights.length === 0) return text;
-  const escaped = highlights.map((h) => h.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
-  const pattern = new RegExp("(" + escaped.join("|") + ")", "g");
-  return text.split(pattern).map((part, i) =>
-    highlights.includes(part) ? (
-      <span key={i} className="font-semibold text-kmss-berry">{part}</span>
-    ) : (
-      <span key={i}>{part}</span>
-    )
-  );
+  const urlPattern = "https?:\\/\\/[^\\s)]*[^\\s).,;!?]";
+  const escaped = highlights?.map((h) => h.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) ?? [];
+  if (escaped.length === 0 && !text.match(/https?:\/\//)) return text;
+  const pattern = new RegExp("(" + [...escaped, urlPattern].join("|") + ")", "g");
+  return text.split(pattern).map((part, i) => {
+    if (!part) return null;
+    const isUrl = /^https?:\/\//.test(part);
+    const isHighlight = highlights?.includes(part);
+    if (isUrl) {
+      return (
+        <a
+          key={i}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-kmss-berry font-semibold underline underline-offset-2 hover:opacity-80 break-all"
+        >
+          {part}
+        </a>
+      );
+    }
+    if (isHighlight) {
+      return <span key={i} className="font-semibold text-kmss-berry">{part}</span>;
+    }
+    return <span key={i}>{part}</span>;
+  });
 }
 
-const newsItems: NewsItem[] = [
-  /* [테스트중 — 배포 보류]
+const allNewsItems: NewsItem[] = [
   {
     category: "공지사항",
     date: "2026.04",
@@ -75,7 +91,7 @@ We are looking for dedicated, volunteer Korean mother scholars to give online le
 
 This is a new project in which, during the month of May, academics from the Korean MotherScholar Society (KMSS) will deliver lectures to children of Korean heritage worldwide, co-hosted by the KMSS and a non-profit organization, aeiou family.
 
-aeiou family e.V. is an officially registered in Germany that offers programs and resources for families in multilingual and multicultural environments, as well as for institutions specializing in teaching heritage languages. Specifically, for families growing up with the Korean language and culture, seminars on multilingual development and education for parents/caregivers, along with Korean storytime sessions for children, are offered. More information can be found at aeioufamily.org.
+aeiou family e.V. is an officially registered in Germany that offers programs and resources for families in multilingual and multicultural environments, as well as for institutions specializing in teaching heritage languages. Specifically, for families growing up with the Korean language and culture, seminars on multilingual development and education for parents/caregivers, along with Korean storytime sessions for children, are offered. More information can be found at https://aeioufamily.org.
 
 For Interested:
 
@@ -89,7 +105,7 @@ Participating volunteer mother scholars will receive Kakaotalk gifticons from th
 
 If you are interested in joining, feel free to contact Wony, the vice president of the KMSS, in the KakaoTalk group chat or via email at aeioufamily@outlook.de.
 
-"KMSS stands with mother scholars and all who walk the path of scholarship."`,
+"The Korean MotherScholar Society stands with mother scholars and all those on the academic path."`,
     highlights: [
       "해외에서 자라는 아이들에게 한국어로 다양한 주제의 강의를 선물해주실 엄마학자를 모집합니다!",
       "강의 30분 + 질의응답 10분",
@@ -107,7 +123,6 @@ If you are interested in joining, feel free to contact Wony, the vice president 
       "aeioufamily@outlook.de",
     ],
   },
-  */
   {
     category: "특강 및 행사",
     date: "2026.02.23",
@@ -204,6 +219,11 @@ If you are interested in joining, feel free to contact Wony, the vice president 
     detail: "언론 보도 및 인터뷰 자료를 준비 중입니다.",
   },
 ];
+
+const newsItems: NewsItem[] =
+  process.env.NODE_ENV === "development"
+    ? allNewsItems
+    : allNewsItems.filter((item) => !item.draft);
 
 const tagStyle: Record<string, string> = {
   공지: "bg-kmss-berry/10 text-kmss-berry",
