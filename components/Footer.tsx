@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const siteLinks = [
   { href: "/about", label: "협회소개" },
-  { href: "/news", label: "소식" },
+  { href: "/news", label: "협회소식" },
   { href: "/archive", label: "아카이브" },
   { href: "/join", label: "참여하기" },
   { href: "/en", label: "English" },
