@@ -17,7 +17,7 @@ const executives = [
   { role: "회장", name: "선애경", nickname: "두잇맘", org: "고려대학교 공학교육혁신센터 (교육행정학 및 고등교육학)", position: "연구교수" },
   { role: "부회장", name: "이원경", nickname: "Wony", org: "Ludwig-Maximilians-Universität (심리학과)", position: "박사과정" },
   { role: "감사", name: "Rey Jeong", nickname: "레이J", org: "캘리포니아 주립대학교 새크라멘토 (미술학부)", position: "조교수" },
-  { role: "감사", name: "진선미", nickname: "가인맘", org: "Indiana University Bloomington (고등교육전공)", position: "박사수료" },
+  { role: "감사", name: "진선미", nickname: "가인맘", org: "University of Redlands (고등교육 & 교육리더십)", position: "조교수" },
   { role: "서기", name: "박주영", nickname: "제이씬", org: "이화여자대학교 임상바이오헬스대학원 (임상영양학전공)", position: "석사과정" },
   { role: "서기", name: "송수연", nickname: "리즈", org: "경기 신천고등학교 (역사교육전공)", position: "박사수료" },
   { role: "이사", name: "김소이", nickname: "세츄츄", org: "충남대학교 (직업교육전공)", position: "박사수료" },

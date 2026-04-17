@@ -21,7 +21,7 @@ const executivesEn = [
   { role: "President", name: "Aekyoung Sun", org: "Korea University (Educational Administration & Higher Education)", position: "Research Professor" },
   { role: "Vice President", name: "Ownkyeong Lee", org: "Ludwig-Maximilians-Universität (Psychology)", position: "PhD Student" },
   { role: "Auditor", name: "Rey Jeong", org: "California State University, Sacramento (Studio Art)", position: "Assistant Professor" },
-  { role: "Auditor", name: "Sunmi Jin", org: "Indiana University Bloomington (Higher Education)", position: "PhD ABD" },
+  { role: "Auditor", name: "Sunmi Jin", org: "University of Redlands (Higher Education & Educational Leadership)", position: "Assistant Professor" },
 ];
 
 export default function EnPage() {
