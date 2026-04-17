@@ -54,10 +54,33 @@ export default function ArchivePage() {
         {activeTab === "뉴스레터" && (
           <div>
             <h2 className="text-lg font-semibold text-kmss-navy mb-6">뉴스레터</h2>
-            <div className="bg-kmss-berry-light rounded-2xl p-8 text-center border border-pink-100">
-              <p className="text-4xl mb-4">📮</p>
-              <p className="font-semibold text-kmss-navy">뉴스레터 1호 준비 중</p>
+            <div className="flex flex-col gap-4">
+              <a
+                href="/newsletter/vol01.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow block"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-kmss-berry/10 text-kmss-berry">
+                    Vol. 01
+                  </span>
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">
+                    Preview
+                  </span>
+                  <span className="text-xs text-gray-400">2026.06</span>
+                </div>
+                <h3 className="font-semibold text-kmss-navy leading-snug mb-1">
+                  창간호 — 엄마학자들에게 띄우는 첫 편지
+                </h3>
+                <p className="text-sm text-gray-500">
+                  연구와 양육의 여정에서 건네는 우리의 이야기 (프리뷰 버전)
+                </p>
+              </a>
             </div>
+            <p className="text-center text-gray-400 text-sm mt-8">
+              창간호 발행 준비 중입니다.
+            </p>
           </div>
         )}
 
