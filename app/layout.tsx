@@ -12,6 +12,10 @@ const notoSansKr = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.koreanmotherscholar.org"),
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   title: {
     default: "한국엄마학자협회 | KMSS",
     template: "%s | KMSS",
