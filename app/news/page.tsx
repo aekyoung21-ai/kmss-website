@@ -74,7 +74,7 @@ const newsItems: NewsItem[] = [
     speaker: "임태형 교수 (전주교육대학교)",
     datetime: "2025년 8월 29일(금) · ZOOM 온라인",
     fee: "무료",
-    detail: "엄마학자들을 위한 AI 활용 교수법 초청 특강으로, 117명이 신청한 KMSS의 첫 무료특강입니다.",
+    detail: "엄마학자들을 위한 AI 활용 교수법 초청 특강으로, KMSS의 첫 무료특강입니다.",
   },
   {
     category: "특강 및 행사",
