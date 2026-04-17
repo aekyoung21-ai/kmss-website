@@ -29,3 +29,178 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* ============================================================
+   HERO SECTION — refined official
+   ============================================================ */
+.hero-section {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 34, 82, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, #fdfbf8 0%, #faf4f1 55%, #f8f0f4 100%);
+  isolation: isolate;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-glow-berry {
+  width: 340px;
+  height: 340px;
+  top: -80px;
+  left: -60px;
+  background: radial-gradient(circle, rgba(201, 121, 155, 0.55) 0%, rgba(201, 121, 155, 0) 70%);
+}
+.hero-glow-navy {
+  width: 380px;
+  height: 380px;
+  bottom: -120px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(138, 170, 216, 0.42) 0%, rgba(138, 170, 216, 0) 70%);
+}
+
+.hero-reveal {
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-ornament {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 320px;
+  justify-content: center;
+}
+.hero-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(28, 26, 74, 0.18) 50%, transparent 100%);
+}
+.hero-diamond {
+  font-size: 10px;
+  color: var(--color-kmss-berry);
+  letter-spacing: 0;
+  transform: translateY(-1px);
+}
+
+.hero-cta-primary {
+  box-shadow: 0 1px 2px rgba(28, 26, 74, 0.08), 0 8px 22px rgba(139, 34, 82, 0.18);
+}
+.hero-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(28, 26, 74, 0.1), 0 14px 32px rgba(139, 34, 82, 0.28);
+  opacity: 0.95;
+}
+.hero-cta-secondary {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 2px rgba(28, 26, 74, 0.06), 0 6px 18px rgba(28, 26, 74, 0.1);
+}
+.hero-cta-secondary:hover {
+  background: var(--color-kmss-navy);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(28, 26, 74, 0.1), 0 12px 28px rgba(28, 26, 74, 0.22);
+}
+
+/* ============================================================
+   SCROLL REVEAL — used by <Reveal> client component
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================================
+   HIGHLIGHT CARDS — navy section
+   ============================================================ */
+.highlight-card {
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.highlight-card .highlight-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--color-kmss-berry) 0%, var(--color-kmss-berry-mid) 100%);
+  transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (min-width: 768px) {
+  .highlight-card .highlight-accent {
+    left: 0;
+  }
+}
+.highlight-card:hover {
+  transform: translateY(-3px);
+}
+.highlight-card:hover .highlight-accent {
+  width: 56px;
+}
+
+/* ============================================================
+   ABOUT TEASER — title ornament
+   ============================================================ */
+.about-title {
+  position: relative;
+  padding-left: 16px;
+}
+.about-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  bottom: 0.35em;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--color-kmss-berry) 0%, var(--color-kmss-berry-mid) 100%);
+}
+
+/* ============================================================
+   STEP BADGE — 참여 방법 numeric marker
+   ============================================================ */
+.step-badge {
+  flex-shrink: 0;
+  margin-top: 0.15em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--color-kmss-berry);
+  padding: 0.15rem 0 0.15rem 0.5rem;
+  border-left: 1px solid rgba(139, 34, 82, 0.35);
+  min-width: 1.9rem;
+}
