@@ -17,6 +17,7 @@ type NewsItem = {
   fee?: string;
   contact?: string;
   logos?: { src: string; alt: string; scale?: number }[];
+  posters?: { src: string; alt: string }[];
   detail: string;
   detailEn?: string;
   titleEn?: string;
@@ -55,6 +56,153 @@ function renderWithHighlights(text: string, highlights?: string[]) {
 }
 
 const allNewsItems: NewsItem[] = [
+  {
+    category: "특강 및 행사",
+    date: "2026.04.30",
+    title: "[5월 행사] 2026 K-Family Month 온라인 K-강의 — 전 세계 한국계 어린이·청소년 초대",
+    titleEn: "[May Event] 2026 K-Family Month Online K-Lectures — For Children of Korean Heritage Worldwide",
+    tag: "행사",
+    datetime: "2026년 5월 8일 ~ 24일 (온라인)",
+    location: "ZOOM 온라인",
+    fee: "전액 무료",
+    contact: "aeioufamily@outlook.de (한국어/영어/독일어 가능)",
+    logos: [
+      { src: "/kmss-logo-vertical.png", alt: "한국엄마학자협회 (KMSS)", scale: 1.5 },
+      { src: "/aeiou-family.png", alt: "aeiou family e.V." },
+    ],
+    posters: [
+      { src: "/aeiou-poster-kor.png", alt: "2026 K-Family Month 온라인 K-강의 한글 포스터" },
+      { src: "/aeiou-poster-eng.png", alt: "2026 K-Family Month Online K-Lectures English Poster" },
+    ],
+    detail: `💌 초대합니다!
+
+5월 가정의 달, 한국엄마학자협회(KMSS)와 독일 비영리 단체 aeiou family가 전 세계 한국계 어린이·청소년을 위해 특별한 자리를 마련했습니다.
+
+한국에서, 그리고 세계 곳곳에서 연구하고 가르치는 엄마학자 9분이 직접 강의를 준비했습니다. 면역학·언어와 문화·간호·진로·기후 정의·감정·전통 소리(진도 아리랑)·보드게임까지 — 학문적이지만 재미있고, 무엇보다 아이들과 직접 호흡하는 인터랙티브한 40분 수업입니다.
+
+✅ 한눈에 보기
+• 대상: 만 10–18세 한국계 어린이·청소년
+• 언어: 한국어  /  시간: 회당 40분
+• 참가비: 전액 무료
+• 방식: 온라인 (원하는 강의 여러 개 선택 가능)
+• 신청 마감: 2026년 5월 5일
+
+🗓️ 5월 강의 일정
+
+5월 8일  ·  한국 저녁 9시 / 중앙유럽 오후 2시 / 미동부 오전 8시
+신수민 교수 — 스마트폰 화면을 끄면, 진짜 내 마음이 켜진다
+
+5월 9일  ·  한국 오전 11시 / 중앙유럽 오전 4시 / 미동부 5월 8일 저녁 10시
+김혜리 박사후연구원 — 면역과 바이오센서의 작용
+
+5월 10일  ·  한국 오전 10시 / 중앙유럽 오전 3시 / 미동부 5월 9일 저녁 9시
+이지영 박사 — 각 언어에 담긴 문화를 통해 나와 세상 이해하기
+
+5월 15일  ·  한국 오후 3시 / 중앙유럽 오전 8시 / 미동부 오전 2시
+이하나 교수 — 간호사는 무엇을 할까?
+
+5월 16일  ·  한국 저녁 9시 / 중앙유럽 오후 2시 / 미동부 오전 8시
+김보경 한국보드게임교육협회장 — 선 없는 세상에서 만나는 우리: 보드게임으로 잇는 한국어 마음
+
+5월 17일  ·  한국 저녁 10시 / 중앙유럽 오후 3시 / 미동부 오전 9시
+안지은 강사 — 자기 탐색과 진로 설계
+
+5월 22일  ·  한국 오후 4시 / 중앙유럽 오전 9시 / 미동부 오전 3시
+김선미 무형유산 수궁가 이수자 — 진도 아리랑
+
+5월 23일  ·  한국 5월 24일 0시 / 중앙유럽 오후 5시 / 미동부 오전 11시
+이경선 교수 — 기후 정의: 누가 비용을 치르고, 누가 혜택을 누리는가?
+
+5월 24일  ·  한국 5월 25일 0시 / 중앙유럽 오후 5시 / 미동부 오전 11시
+정지은 박사 — 감정 인식과 긍정 표현하기
+
+📝 신청하기
+• 한국어 신청: https://forms.gle/U95U8Fczp5Hvqo7s9
+• English Form: https://forms.gle/FrjMJozQzCJVuWAQ7
+• 자세한 안내(Instagram): https://www.instagram.com/p/DXu65LUDDsQ/
+• 문의: aeioufamily@outlook.de (한국어/영어/독일어 가능)
+
+흔쾌히 시간을 내어주신 9분의 엄마학자 선생님들, 그리고 함께 이 자리를 만들어주신 aeiou family에 진심으로 감사드립니다. 🙏
+
+5월, 전 세계의 한국계 아이들이 화면 너머로 만나 서로의 이야기를 나누는 따뜻한 시간이 되길 바랍니다.
+
+— 한국엄마학자협회 KMSS`,
+    detailEn: `💌 You're Invited!
+
+This May, during Korea's Family Month, the Korean MotherScholar Society (KMSS) and the German non-profit organization aeiou family have prepared something special for children and teenagers of Korean heritage around the world.
+
+Nine mother scholars — researchers and educators based in Korea and around the world — have designed lectures across a wide range of topics: immunology, language and culture, nursing, career planning, climate justice, emotional regulation, traditional Korean music (Jindo Arirang), and board games. Academic, fun, and interactive — 40-minute classes designed to engage directly with children.
+
+✅ At a Glance
+• Audience: Children & teens of Korean heritage, ages 10–18
+• Language: Korean  /  Duration: 40 minutes per session
+• Fee: Free of charge
+• Format: Online (multiple lectures can be selected)
+• Registration Deadline: May 5, 2026
+
+🗓️ May Lecture Schedule
+
+May 8  ·  KST 9PM / CET 2PM / EST 8AM
+Prof. Dr. Soomin Shin — Turn off Your Phone, Your True Mind Comes to Life.
+
+May 9  ·  KST 11AM / CET 4AM / EST May 8 10PM
+Dr. Hyeri Kim — The Role of Biosensors and the Immune System
+
+May 10  ·  KST 10AM / CET 3AM / EST May 9 9PM
+Dr. Ji Young Lee — Understanding the Self and the World Through the Cultures Embodied in Each Language
+
+May 15  ·  KST 3PM / CET 8AM / EST 2AM
+Prof. Dr. Hana Lee — What Do Nurses Do?
+
+May 16  ·  KST 9PM / CET 2PM / EST 8AM
+M.Sc. Bokyeung Kim — We Play Board Games and Break Down Barriers Together.
+
+May 17  ·  KST 10PM / CET 3PM / EST 9AM
+M.Sc. Jieun Ahn — Self-Discovery and Career Planning
+
+May 22  ·  KST 4PM / CET 9AM / EST 3AM
+M.Sc. Sunmi Kim (Certified Practitioner of the Sugungga 수궁가) — Jindo Arirang
+
+May 23  ·  KST May 24 0AM / CET 5PM / EST 11AM
+Prof. Dr. Kyungsun Lee — Climate Justice: Who Pays the Cost, Who Reaps the Benefit?
+
+May 24  ·  KST May 25 0AM / CET 5PM / EST 11AM
+Dr. Jieun Jeong — A Guide to Identifying and Regulating Emotions
+
+📝 How to Register
+• Korean Form: https://forms.gle/U95U8Fczp5Hvqo7s9
+• English Form: https://forms.gle/FrjMJozQzCJVuWAQ7
+• More details (Instagram): https://www.instagram.com/p/DXu65LUDDsQ/
+• Inquiries: aeioufamily@outlook.de (EN/KO/DE)
+
+Our heartfelt thanks to the nine mother scholars who generously offered their time, and to aeiou family for partnering with us. 🙏
+
+May this be a warm month where children of Korean heritage around the world meet across screens and share their stories.
+
+— Korean MotherScholar Society (KMSS)`,
+    highlights: [
+      "💌 초대합니다!",
+      "전 세계 한국계 어린이·청소년",
+      "엄마학자 9분",
+      "전액 무료",
+      "2026년 5월 5일",
+      "https://forms.gle/U95U8Fczp5Hvqo7s9",
+      "https://forms.gle/FrjMJozQzCJVuWAQ7",
+      "https://www.instagram.com/p/DXu65LUDDsQ/",
+      "aeioufamily@outlook.de",
+    ],
+    highlightsEn: [
+      "💌 You're Invited!",
+      "children and teenagers of Korean heritage",
+      "Nine mother scholars",
+      "Free of charge",
+      "May 5, 2026",
+      "https://forms.gle/U95U8Fczp5Hvqo7s9",
+      "https://forms.gle/FrjMJozQzCJVuWAQ7",
+      "https://www.instagram.com/p/DXu65LUDDsQ/",
+      "aeioufamily@outlook.de",
+    ],
+  },
   {
     category: "공지사항",
     date: "2026.04",
@@ -335,6 +483,20 @@ export default function NewsPage() {
                               style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
                             />
                           </div>
+                        ))}
+                      </div>
+                    )}
+                    {item.posters && item.posters.length > 0 && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
+                        {item.posters.map((poster) => (
+                          <Image
+                            key={poster.src}
+                            src={poster.src}
+                            alt={poster.alt}
+                            width={1240}
+                            height={1754}
+                            className="w-full h-auto rounded-lg border border-gray-200 shadow-sm object-contain"
+                          />
                         ))}
                       </div>
                     )}
